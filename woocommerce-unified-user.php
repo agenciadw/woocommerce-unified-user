@@ -1,10 +1,31 @@
 <?php
 /**
- * Plugin Name: WooCommerce Unified User Management
+ * Plugin Name: DW User Management for WooCommerce
+ * Plugin URI: https://github.com/agenciadw/woocommerce-unified-user
+ * Author: David William da Costa
+ * Author URI: https://github.com/agenciadw
+ * Requires at least: 5.0
+ * Requires PHP: 7.0
+ * Tested up to: 6.4
+ * WC requires at least: 6.0
  * Description: Gerencia nomes de usuário e exibição no WooCommerce/WordPress, forçando o formato Nome.Sobrenome e Nome Sobrenome após a finalização da compra, e permitindo atualização em massa para usuários existentes.
  * Version: 1.1
- * Author: David William da Costa
+ * License: GPL v2 or later
+ * Text Domain: woocommerce-unified-user
  */
+
+// Adiciona links extras abaixo do nome do plugin
+add_filter( 'plugin_row_meta', 'joinotify_booking_integration_row_meta', 10, 2 );
+function joinotify_booking_integration_row_meta( $links, $file ) {
+    if ( plugin_basename( __FILE__ ) === $file ) {
+        $custom_links = array(
+            '<a href="https://github.com/agenciadw/woocommerce-unified-user/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentação</a>',           
+        );
+        // Coloca os links personalizados após os padrões
+        return array_merge( $links, $custom_links );
+    }
+    return $links;
+}
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly

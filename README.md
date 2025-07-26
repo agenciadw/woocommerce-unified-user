@@ -1,4 +1,4 @@
-# WooCommerce Unified User Management
+# DW User Management for WooCommerce
 
 Este plugin para WordPress/WooCommerce oferece uma solução completa para gerenciar nomes de usuário e exibição, garantindo o formato `Nome.Sobrenome` para novos cadastros e permitindo a atualização em massa para usuários existentes.
 
@@ -28,5 +28,3 @@ Este plugin para WordPress/WooCommerce oferece uma solução completa para geren
 - **Recursos do Servidor:** A execução da atualização em massa pode consumir recursos do servidor, especialmente em sites com um grande número de usuários. Se você notar lentidão ou erros, pode ser necessário aumentar o tempo limite de execução do PHP ou a memória disponível no seu servidor, ou entrar em contato com seu provedor de hospedagem.
 - **Nome de Usuário Existente:** Se o nome de usuário gerado (`Nome.Sobrenome`) já existir, o plugin tentará adicionar um número ao final (ex: `joao.silva1`, `joao.silva2`, etc.) para garantir a unicidade.
 - **Nome e Sobrenome:** As funcionalidades dependem dos campos `first_name` e `last_name` (Nome e Sobrenome) preenchidos no perfil do usuário (para usuários existentes) ou nos dados de faturamento (para novos cadastros). Certifique-se de que esses campos estejam corretos para que o nome de usuário e o nome de exibição sejam gerados adequadamente.
-
-
