@@ -14,19 +14,6 @@
  * Text Domain: woocommerce-unified-user
  */
 
-// Adiciona links extras abaixo do nome do plugin
-add_filter( 'plugin_row_meta', 'joinotify_booking_integration_row_meta', 10, 2 );
-function joinotify_booking_integration_row_meta( $links, $file ) {
-    if ( plugin_basename( __FILE__ ) === $file ) {
-        $custom_links = array(
-            '<a href="https://github.com/agenciadw/woocommerce-unified-user/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentação</a>',           
-        );
-        // Coloca os links personalizados após os padrões
-        return array_merge( $links, $custom_links );
-    }
-    return $links;
-}
-
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
